@@ -17,6 +17,9 @@
 
 <body>
 
+    <!-- =====Pre Loader(Yash)===== -->
+    <div id="loader-container"></div>
+
     <!--Homepage-->
     <div class="first">
         <div class="flex-container-1">
@@ -32,7 +35,7 @@
             </div>
         </div>
         <div class="title">
-            <p>STARTUPS</p>
+            <p>NOTABLE STARTUPS</p>
         </div>
         <div class="listing">
             <p class="listing-text">See all listings
@@ -129,6 +132,12 @@
     <!--/Snazzy-->
 
 
+
+
+
+
+
+
     <!--StoryXpress-->
     <div class="fifth">
         <div class="flex-container-5">
@@ -149,10 +158,12 @@
                         Know more ➜
                     </p>
                 </div>
+
             </div>
             <div class="StoryXpress">
                 <image class="StoryXpress-logo" src="images/StoryXpress.png"></image>
             </div>
+
         </div>
     </div>
     <!--/StoryXpress-->
@@ -241,3 +252,28 @@
 <!--/Footer-->
 
 </html>
+
+<script>
+    // Pre loader (Yash Sharma)
+    const id$ = (id) => document.getElementById(id);
+    const q$ = (query) => document.querySelector(query);
+    document.onreadystatechange = function () {
+        let state = document.readyState;
+        if (state == "interactive") {
+            document.getElementsByClassName("body-inner").item(0).style.visibility =
+                "hidden";
+        } else if (state == "complete") {
+            const loadTime =
+                window.performance.timing.domContentLoadedEventEnd -
+                window.performance.timing.navigationStart;
+            const THRESHOLD = 1000;
+            const MIN_LOAD_TIME = loadTime < THRESHOLD ? THRESHOLD : 0;
+            setTimeout(() => {
+                id$("loader-container").style.visibility = "hidden";
+                document
+                    .getElementsByClassName("body-inner")
+                    .item(0).style.visibility = "visible";
+            }, MIN_LOAD_TIME);
+        }
+    };
+</script>
