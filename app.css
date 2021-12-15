@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Abysinicca SIL';
       src: url('/fonts/AbyssinicaSIL-R.ttf');
+      scroll-behavior: smooth;
 
 }
 
@@ -104,9 +105,44 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
+a.text{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    font-family:sans-serif;
+  }
+
+a.text:hover{
+    text-decoration: underline;
+}
 
 
+a.arrow{
+    text-decoration: transparent;
+}
+a.arrow:hover {
+    font-weight: bolder;
+  }
 
+
+a.button-ecell{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    font-family: Arial, Helvetica, sans-serif;
+}
+a.button-ecell:hover {
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+a.arrow-ecell{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    transition: transform 0.2s;
+}
+a.arrow-ecell:hover {
+    font-style:oblique;
+  }
 
 
 
@@ -571,87 +607,73 @@ border-radius: 65px;
 
 
 
+
+
+
+
+
+
+
+
+
 /*==========Footer==========
 ==============================*/
-footer{ 
-    font-family: 'Roboto', sans-serif;
-    background-color:rgb(36, 36, 36);
-    color:white;
+footer {
+    font-family: "Roboto", sans-serif;
+    background-color: #0f0f0f;
+    color: #ececec;
     text-align: center;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-footer a {
+    padding-top: 1rem;
+  }
+  
+  footer > a {
+    display: block;
+    height: max-content;
     text-decoration: none;
-}
-
-#footerbottom {
-    background-color:rgb(189, 189, 189);
+    width: 100%;
+  }
+  
+  #footerbottom {
+    background-color: #4a4d55;
     font-size: 10px;
-    color:rgb(36, 36, 36);
+    color: cornsilk;
     width: 100%;
     text-align: center;
-    padding: 5px 0px;
+    padding: 10px 0px;
     margin: 0;
-
-}
-
-footer img {
+  }
+  
+  footer img {
     margin-top: 25px;
     margin-bottom: 0px;
-}
-
-footer p {
+  }
+  
+  footer p {
     letter-spacing: 2px;
-    margin-top: 25px; 
-}
-
-#logoContnr {
-    margin: 20px;
+    margin-top: 25px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  #logoContnr {
+    margin: 30px;
     display: flex;
     justify-content: space-around;
     width: 100%;
-    max-width: 450px;
-    margin-top: 5px;
-    margin-bottom: 60px;
-}
-
-.slogan{
-    color: rgb(98, 13, 246);
-    margin-bottom: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-svg {
-    color: rgb(98, 13, 246);
-}
-
-svg:hover {
+    max-width: 300px;
+  }
+  
+  svg {
+    color: #ececec;
+  }
+  
+  #logoContnr svg:hover,
+  #logoContnr svg:active {
     cursor: pointer;
-}
-
-.fb:hover, .fb:active {
-    color:#0A82ED;
-}
-
-.ig:hover, .ig:active {
-    color: #CA2D8B;
-}
-
-.li:hover, .li:active {
-    color: #0A66C2;
-}
-
-.yt:hover, .yt:active {
-    color: #FF0000;
-}
-
-.tw:hover, .tw:active {
-    color: #1DA1F2;
-}
+    color: #620df6;
+  }
 
 /* =====Pre Loader(Yash)===== */
 #loader-container {
@@ -661,6 +683,20 @@ svg:hover {
     background: black url(preloader/preloader2.gif) no-repeat center;
     z-index: 9999;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
